@@ -36,3 +36,19 @@
 .border-bottom {
     border-bottom: 2px solid #7a7a7a !important;
 }
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1.5rem 5vw;
+}
+
+.h3 {
+    font-size: 2.5rem;
+    font-weight: 100;
+    margin: 0rem 2vw;
+    padding: 0rem 2vw;
+}
