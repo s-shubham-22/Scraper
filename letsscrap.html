@@ -37,11 +37,22 @@
 
     <!-- Main -->
     <section class="main">
-        <select class="form-select" aria-label="Default select example">
-            <option selected disabled>How Do You Want to Scrap the Website</option>
-            <option value="1">Using HTML Selector</option>
-            <option value="2">Using XPath</option>
-        </select>
+        <form class="form1">
+            <select class="form-select select-btn" aria-label="Default select example" id="choice1">
+                <option selected disabled>How Do You Want to Scrap the Website</option>
+                <option value="1">Using HTML Selector</option>
+                <option value="2">Using XPath</option>
+            </select>
+            <input class="form-control" type="text" placeholder="Number Of Elements" aria-label="default input example" id="numOfEle">
+            <button type="button" class="btn btn-primary" id="form1-btn">Submit</button>
+        </form>
+        <form class="form2" id="formId">
+            <input class="form-control" type="text" placeholder="URL" aria-label="default input example" id="url">
+            <input class="form-control" type="text" placeholder="Label for Column" aria-label="default input example" id="label1">
+            <input class="form-control" type="text" placeholder="Selector" aria-label="default input example" id="selector1">
+            <input class="form-control" type="text" placeholder="Label for Column" aria-label="default input example" id="label1">
+            <input class="form-control" type="text" placeholder="Selector" aria-label="default input example" id="selector1">
+        </form>
     </section>
 
     <!-- Footer -->
