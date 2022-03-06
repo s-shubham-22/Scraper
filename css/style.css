@@ -43,7 +43,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    margin: 1.5rem 5vw;
+    margin: 0.5rem 5vw;
 }
 
 .h3 {
@@ -78,12 +78,18 @@
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 50%;
 }
 
-#selector1,
-#label1 {
+.selector,
+.label {
     display: inline-block;
     width: 45%;
+}
+
+.form-select,
+.form-control,
+.btn {
+    margin: 0.5rem;
 }

@@ -11,26 +11,30 @@ $('html, body').animate({
 window.addEventListener('load', function() {
     path = document.location.pathname;
     page = path.split("/").pop();
+
     filename = page.split(".").shift();
     $("#" + filename).addClass("active");
 })
 
-const btn = $('#form1-btn');
-const sb = $('#choice1');
-const num = $('#numOfEle');
+const button = document.querySelector('#form1-btn');
+button.onclick = (event) => {
+    var choice = 0;
+    const num = document.querySelector('#numOfEle').value;
+    const sb = document.querySelector('#choice1');
+    const node = document.querySelector('#form2Id');
 
-var choice = 0;
-btn.onclick = (event) => {
+    node.innerHTML = '';
+
     event.preventDefault();
-    // show the selected index
+
     choice = sb.selectedIndex;
-    if (choice === 1) {
-        // for (let i = 1; i <= num; i++) {
-        //     console.log('Hello');
-        //     // $('#formId').append(`<input class="form-control" type="text" placeholder="Label for Column" aria-label="default input example" id="label${i}">
-        //     // <input class="form-control" type="text" placeholder="Selector" aria-label="default input example" id="selector${i}">`)
-        // }
-    } else {
-        alert('You have choosen web scraping using XPath');
+
+    node.innerHTML = '<input class="form-control" type="text" placeholder="URL" aria-label="default input example" id="url" required>'
+
+    for (let i = 1; i <= num; i++) {
+        node.innerHTML += `<input class="form-control label" type="text" placeholder="Label for Column ${i}" aria-label="default input example" id="label${i}" required>`;
+        node.innerHTML += `<input class="form-control selector" type="text" placeholder="Selector / XPath ${i}" aria-label="default input example" id="selector${i}" required>`;
     }
+
+    node.innerHTML += `<button type="button" class="btn btn-primary" id="form1-btn">Submit</button>`;
 };
