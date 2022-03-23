@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/s-shubham-22/Scraper/issues"
   },
-  "homepage": "https://github.com/s-shubham-22/Scraper#readme"
+  "homepage": "https://github.com/s-shubham-22/Scraper#readme",
+  "devDependencies": {
+    "express": "^4.17.3"
+  }
 }
