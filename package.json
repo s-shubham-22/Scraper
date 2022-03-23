@@ -1,0 +1,23 @@
+{
+  "name": "scraper",
+  "version": "1.0.0",
+  "description": "The people who want to do Web Scraping easily will visit and will add this",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-shubham-22/Scraper.git"
+  },
+  "keywords": [
+    "Web",
+    "Scraping"
+  ],
+  "author": "Shubham Sareliya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/s-shubham-22/Scraper/issues"
+  },
+  "homepage": "https://github.com/s-shubham-22/Scraper#readme"
+}
