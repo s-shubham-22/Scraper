@@ -1,3 +1,6 @@
+// const spawn = require(('child_process').spawn);
+const loadash = require('lodash');
+
 // To load header and footer
 $("#header").load("header.html");
 $("#footer").load("footer.html");
@@ -12,11 +15,12 @@ window.addEventListener('load', function() {
     path = document.location.pathname;
     page = path.split("/").pop();
 
-    filename = page.split(".").shift();
-    $("#" + filename).addClass("active");
-})
+    var filename = page.split(".").shift();
+    console.log(res);
+    // this.document.querySelector(filename).addClass("active");
+});
 
-const button = document.querySelector('#form1-btn');
+const button = $('#form1-btn');
 button.onclick = (event) => {
     var choice = 0;
     const num = document.querySelector('#numOfEle').value;
