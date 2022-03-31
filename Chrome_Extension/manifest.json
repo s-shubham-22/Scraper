@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "version": "1.0.0",
+    "name": "Scraper",
+    "description": "Scraper - Web Scraping Made Easy",
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["js/jquery-3.6.0.min.js", "js/content.js"]
+    }],
+    "action": {
+        "default_title": "Scraper",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "128": "./icon/128.png",
+        "48": "./icon/48.png",
+        "16": "./icon/16.png"
+    }
+}

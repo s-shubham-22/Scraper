@@ -16,13 +16,20 @@ window.addEventListener('load', function() {
     $('#' + filename).addClass("active");
 });
 
+const reset_btn = $('#form1-btn-reset');
+
+reset_btn.click(() => {
+    location.reload();
+});
+
 const button = $('#form1-btn');
-button.onclick = (event) => {
+
+button.click((event) => {
+    console.log('Hello 1');
     var choice = 0;
     const num = document.querySelector('#numOfEle').value;
     const sb = document.querySelector('#choice1');
     const node = document.querySelector('#form2Id');
-
     node.innerHTML = '';
 
     event.preventDefault();
@@ -32,7 +39,7 @@ button.onclick = (event) => {
 
     if (num) {
         node.innerHTML = '<input class="form-control" type="text" placeholder="URL" aria-label="default input example" id="url" required>'
-
+        console.log('Hello 2');
         for (let i = 1; i <= num; i++) {
             node.innerHTML += `<input class="form-control label" type="text" placeholder="Label for Column ${i}" aria-label="default input example" id="label${i}" required>`;
             node.innerHTML += `<input class="form-control selector" type="text" placeholder="Selector / XPath ${i}" aria-label="default input example" id="selector${i}" required>`;
@@ -53,38 +60,9 @@ button.onclick = (event) => {
             data.label = labels;
             data.selector = selectors;
 
-            // let stringifiedData = JSON.stringify(data);
-
-            // const py = spawn('python', ['./scrapFromWebsite.py', stringifiedData]);
-
-            // resultString = '';
-
-            // py.stdout.on('data', function(stdData) {
-            //     // console.log(stdData.toString())
-            //     resultString += stdData.toString();
-            // });
-
-            // py.stdout.on('end', function() {
-            //     console.log(resultString)
-            //         // Parse the string as JSON when stdout
-            //         // data stream ends
-            //     let resultData = JSON.parse(resultString);
-            //     console.log(resultData)
-            //         // console.log('Sum of array from Python process =', sum);
-            // });
-
             console.log(data);
         };
     } else {
         location.reload();
     }
-};
-
-// For Position of Footer
-// setInterval(() => {
-//     if ($(window).height() >= $(document).height()) {
-//         $(".container").addClass("footer-fixed");
-//     } else {
-//         $("#footer").removeClass("footer-fixed");
-//     }
-// }, 1000)
+});
