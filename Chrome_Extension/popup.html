@@ -9,12 +9,32 @@
 
     <link rel="stylesheet" href="./css/popup.css">
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <!-- font-family: 'Fira Sans', sans-serif; -->
+
 </head>
 
 <body>
-    <h1>Scraper</h1>
-    <input type="button" value="Scrap" class="scrap-btn">
+    <!-- <input type="button" value="Scrap" class="scrap-btn">
+    <div class="download-div"></div> -->
+    <h1 class="heading">Scraper</h1>
+
+    <div id="form-1">
+        <select name="scrapOptions" class="form1-dropdown" id="form1-dropdown">
+            <option value="1">Scrap by CSS Selector</option>
+            <option value="2">Scrap by Xpath</option>
+        </select>
+        <span style="font-size: 17px;">Number of Elements: </span>
+        <input type="text" name="numOfEle" id="form1-num" class="form1-inputField" value="1" required>
+        <button class="form1-btn">Submit</button>
+    </div>
+
+    <div id="form-2"></div>
     <div class="download-div"></div>
+
     <!-- JavaScript -->
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/popup.js"></script>

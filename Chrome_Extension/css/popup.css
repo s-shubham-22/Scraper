@@ -1,4 +1,86 @@
 html {
     width: 400px;
-    height: 500px;
+    min-height: 400px;
+}
+
+* {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    justify-items: center;
+}
+
+.heading {
+    letter-spacing: 5px;
+    font-size: 35px;
+    border-bottom: 5px solid rgb(167, 14, 255);
+    margin: 10px;
+    padding: 5px 0px;
+}
+
+#form-1 {
+    display: grid;
+    justify-items: center;
+}
+
+.form1-dropdown,
+.form1-inputField {
+    display: grid;
+    margin: 10px 0;
+    width: 200px;
+    height: 27px;
+    font-size: 15px;
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+.form1-inputField {
+    width: 100px;
+    text-align: center;
+    display: inline-block;
+}
+
+.scrap-btn,
+.form1-btn,
+.download {
+    height: 35px;
+    width: 100px;
+    font-size: 17px;
+    border-radius: 4px;
+    margin: 10px auto;
+    background-color: rgb(167, 14, 255);
+    color: #f2f2f2;
+    letter-spacing: 1px;
+    border: 0;
+}
+
+.scrap-btn {
+    display: block;
+    margin: 10px auto;
+}
+
+.scrap-btn:hover,
+.form1-btn:hover {
+    cursor: pointer;
+}
+
+.data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label,
+.selector {
+    display: inline-block;
+    width: 150px;
+    height: 25px;
+    border: 1px solid #333333;
+    border-radius: 3px;
+    padding: 2px 4px;
+    margin: 2px 4px;
 }

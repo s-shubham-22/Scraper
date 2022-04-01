@@ -15,5 +15,8 @@
         "128": "./icon/128.png",
         "48": "./icon/48.png",
         "16": "./icon/16.png"
-    }
+    },
+    "permissions": [
+        "tabs"
+    ]
 }
