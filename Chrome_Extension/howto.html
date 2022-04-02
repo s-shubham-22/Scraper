@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./icon/S.png" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <!-- font-family: 'Ubuntu', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- font-family: 'Poppins', sans-serif; -->
+
+    <!-- Bootstrap CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- JQuery -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+
+    <title>Scraper</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <img src="./img/howto.png" class="rounded d-block" alt="...">
+
+    <div class="card mb-3" style="max-width: 80vw;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="./img/selectOption.png" class="img-fluid rounded-start" alt="">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h4 class="card-title" style="font-weight: 600;">1. Select Option</h4>
+                    <p class=" card-text ">Select the any one option from dropdown by which you want to scrap the Website.</p>
+                    <p class="card-text ">Example: Using Selector or Using XPath</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3" style="max-width: 80vw;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="./img/numOfEle.png" class="img-fluid rounded-start" alt="">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h4 class="card-title" style="font-weight: 600;">2. Select Number of Elements</h4>
+                    <p class=" card-text ">Enter Number of Elements you want to Scrap.</p>
+                    <p class="card-text ">For example, if you want to Scrap Name and Scraping (thus 2 Elements) so you will enter 2 in Input Box</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3" style="max-width: 80vw;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="./img/submit1.png" class="img-fluid rounded-start" alt="">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h4 class="card-title" style="font-weight: 600;">3. Submit</h4>
+                    <p class=" card-text ">Click on Submit Butto and you'll get more input fields according to your initial input.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3" style="max-width: 80vw;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="./img/submit1.png" class="img-fluid rounded-start" alt="">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h4 class="card-title" style="font-weight: 600;">4. Fill the Input Fields and Submit</h4>
+                    <p class=" card-text ">Fill Up URL textbox and other Label and Selector Text Box.</p>
+                    <p class=" card-text ">You Have to Input the URL of the Website which you want to Scrap.</p>
+                    <p class=" card-text ">In Label textbox(es) you have to enter the label name for your scraped data column (e.g. Name, Rating, Price etc.)</p>
+                    <p class=" card-text ">In Selector textbox(es) you have to enter the CSS Selector or XPath of the data you want to Scrap. (Which you can get from Inspect tab in Chrome Developer Tools)</p>
+                    <p class=" card-text ">After Filling out the Fields, hit the Submit Button.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3" style="max-width: 80vw;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="./img/downloadBtn.png" class="img-fluid rounded-start" alt="">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h4 class="card-title" style="font-weight: 600;">5. Hit the Download Button</h4>
+                    <p class=" card-text ">After Submittig, it will take some time to scrap data.</p>
+                    <p class=" card-text ">After some time Download Button will Appear.</p>
+                    <p class=" card-text ">By clicking on that button you can Download the Scraped Data CSV File</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3" style="max-width: 80vw;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="./img/downloaded.png" class="img-fluid rounded-start" alt="">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h4 class="card-title" style="font-weight: 600;">6. Your File will get Downloaded</h4>
+                    <p class=" card-text ">After clicking the download button your file will get downloaded.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <center>
+        <h4 style="font-weight: bold; border: 2px solid purple; width: 80%; border-radius: 0.2rem; margin: 1vw auto; background-color: purple; color: white; padding: 1vw auto;">IF YOU DON'T KNOW HOW TO GET THE CSS SELECTOR OR XPATH</h4>
+    </center>
+
+    <div class="card mb-3" style="max-width: 80vw;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="./img/inspect.png" class="img-fluid rounded-start" alt="">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h4 class="card-title" style="font-weight: 600;">1. Go to Inspect</h4>
+                    <p class=" card-text ">Right CLick on Page and Select bootom most Option "Inspect"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3" style="max-width: 80vw;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="./img/copy_selector.png" class="img-fluid rounded-start" alt="">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h4 class="card-title" style="font-weight: 600;">2. Find Element and Copy Selector</h4>
+                    <p class=" card-text ">Find the element in HTML content and copy it's CSS Selector / XPath by right clicking on it's HTML Content</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- JavaScript -->
+    <script src="./js/script.js "></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="./js/bootstrap.bundle.min.js "></script>
+</body>
+
+</html>

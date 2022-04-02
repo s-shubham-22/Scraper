@@ -1,7 +1,5 @@
 const express = require('express');
 const spawn = require('child_process').spawn;
-const createCsvWriter = require('csv-writer').createObjectCsvWriter;
-const fs = require('fs');
 
 const app = express();
 

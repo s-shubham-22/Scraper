@@ -9,22 +9,20 @@ async function getCurrentTab() {
 
 getCurrentTab()
     .then((data) => {
-        console.log('newdata', data.url);
-        window.tabUrl = data;
+        window.tabUrl = data.url;
     })
-    .then(() => { console.log('error') });
 
-console.log('This is Current URL: ', window.tabUrl);
 
 $('.form1-btn').click(function() {
-    let choice = $('#form1-dropdown').val();
+    window.choice = $('#form1-dropdown').val();
     let numOfEle = $('#form1-num').val();
 
     $('#form-2').html('');
+    $('.download-div').html('');
 
     for (let i = 1; i <= numOfEle; i++) {
         let ele = `<div class="data">
-
+        
         <input type="text" name="label${i}" id="" class="label" placeholder="Lable ${i}">
         <input type="text" name="selector${i}" id="" class="selector" placeholder="Selector ${i}">
     </div>`;
@@ -35,7 +33,19 @@ $('.form1-btn').click(function() {
 
 $(document).on('click', '.scrap-btn', async function() {
 
-    url = 'http://localhost:8000/scrap';
+    // console.log('This is Current URL: ', window.tabUrl);
+    // console.log(choice)
+    let url = 'http://localhost:8000/scrap';
+    // window.url = ''
+    // if (window.choice === '1') {
+    //     window.url = 'http://localhost:8000/scrapSelector';
+    //     console.log('In 1')
+    // } else if (window.choice === '2') {
+    //     window.url = 'http://localhost:8000/scrapXpath';
+    //     console.log('In 2')
+    // }
+
+    console.log(url)
 
     selectors = [];
     labels = [];
@@ -48,16 +58,18 @@ $(document).on('click', '.scrap-btn', async function() {
         labels.push($(ele).val());
     })
 
-    tabUrl = 'https://www.flipkart.com/search?q=keayboard&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off'
+    tabUrl = window.tabUrl
 
     console.log(tabUrl);
     console.log(labels);
     console.log(selectors);
+    console.log(choice);
 
     let data = {
+        choice: window.choice,
         tabUrl: tabUrl,
-        selectors: selectors,
         labels: labels,
+        selectors: selectors
     }
 
     let fetchData = {
@@ -70,7 +82,7 @@ $(document).on('click', '.scrap-btn', async function() {
 
     fetch(url, fetchData).then(res => {
         console.log(res);
-        console.log('Hello World')
+        console.log('Scraping Done')
         $('.download-div').html('<form action="http://localhost:8000/download" method="get"><input type="submit" value="Download" class="download"> </form>')
     })
 })

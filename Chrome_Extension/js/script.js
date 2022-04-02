@@ -26,7 +26,6 @@ const button = $('#form1-btn');
 
 button.click((event) => {
     console.log('Hello 1');
-    var choice = 0;
     const num = document.querySelector('#numOfEle').value;
     const sb = document.querySelector('#choice1');
     const node = document.querySelector('#form2Id');
@@ -34,7 +33,7 @@ button.click((event) => {
 
     event.preventDefault();
 
-    choice = sb.selectedIndex;
+    choice = sb.value;
     console.log(num);
 
     if (num) {
@@ -48,20 +47,50 @@ button.click((event) => {
         node.innerHTML += `<button type="button" class="btn btn-primary" id="form2-btn">Submit</button>`;
 
         const scrap_btn = document.querySelector('#form2-btn');
-        scrap_btn.onclick = (event) => {
-            alert("Scraping started");
-            const data = { url: $('#url').val() };
-            const labels = {};
-            const selectors = {};
-            for (let i = 1; i <= num; i++) {
-                labels[i] = $('#label' + i).val();
-                selectors[i] = $('#selector' + i).val();
-            }
-            data.label = labels;
-            data.selector = selectors;
+        $('#form2-btn').click(function() {
+            let url = 'http://localhost:8000/scrap';
 
-            console.log(data);
-        };
+            selectors = [];
+            labels = [];
+
+            $('.selector').each(function(i, ele) {
+                selectors.push($(ele).val());
+            })
+
+            $('.label').each(function(i, ele) {
+                labels.push($(ele).val());
+            })
+
+            tabUrl = document.querySelector('#url').value;
+
+            console.log(tabUrl);
+            console.log(labels);
+            console.log(selectors);
+            console.log(choice);
+
+            let data = {
+                choice: choice,
+                tabUrl: tabUrl,
+                labels: labels,
+                selectors: selectors
+            }
+
+            console.log(data)
+
+            let fetchData = {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+            }
+
+            fetch(url, fetchData).then(res => {
+                console.log(res);
+                console.log('Scraping Done')
+                $('.download-div').html('<form action="http://localhost:8000/download" method="get"><input type="submit" value="Download" class="btn btn-primary"> </form>')
+            })
+        });
     } else {
         location.reload();
     }
